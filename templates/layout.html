@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Scrathon API</title>
+    <link rel="icon" href="https://cdn.scratch.mit.edu/scratchr2/static/__9209616f20ac7fc52efa806cd216a370__/images/404-giga.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/2ecf2d1183.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Comfortaa&display=swap:400' rel='stylesheet' type='text/css'>
+    <link href="{{ url_for('static', filename = 'index.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class='title'>
+        <img class='image' src="https://cdn.scratch.mit.edu/scratchr2/static/__9209616f20ac7fc52efa806cd216a370__/images/404-giga.png" alt="Scrathon api logo" width=260 height=60>
+    </nav>
+    <nav class="nav__bar">
+      <ul style="float:left" class="nav__links">
+        <li><a style="float:left" href="{{url_for('home') }}"><i class="fas fa-house"></i>Home</a></li> 
+        {% if session['key'] %}
+        <li><a style="float:left" href="{{ url_for('dashboard') }}"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    </header>
+    {% block content %}
+
+    {% endblock content %}
+  </body>
+</html>
