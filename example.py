@@ -1,4 +1,4 @@
-#If you know how to use scratchattach, just look at line 13 - 30
+#If you know how to use scratchattach, just look at line 13 - 42
 
 import requests
 import scratchattach as scratch3
@@ -40,4 +40,5 @@ def purchasecheck(username, SellerName, Price): #Check if the player bought the 
     })
 
     return request.content
+
 client.run()
