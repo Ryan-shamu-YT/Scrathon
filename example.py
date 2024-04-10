@@ -12,7 +12,7 @@ client = scratch3.CloudRequests(conn)
 
 @client.request
 def purchase(username, SellerName, Price):
-    request = requests.post("https://scrathon.justablock.online/transaction", json={
+    request = requests.post("https://scrathon.justablock.online:1111/transaction", json={
     "price": Price,
     "buyer": username,
 	"seller": SellerName
@@ -33,7 +33,7 @@ def purchase(username, SellerName, Price):
 
 @client.request
 def purchasecheck(username, SellerName, Price): #Check if the player bought the item so you can give them the promised item (If you don't give the item to the player you will get banned from selling items)
-    request = requests.post("https://scrathon.justablock.online/checkpurchase", json={
+    request = requests.post("https://scrathon.justablock.online:1111/checkpurchase", json={
     "price": Price,
     "buyer": username,
 	"seller": SellerName
