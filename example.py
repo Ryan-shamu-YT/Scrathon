@@ -1,6 +1,6 @@
 #If you know how to use scratchattach, just look at line 13 - 31
 import scratchattach as scratch3
-from ScrathonPayments import Scrathon
+from ScrathonPayments import Scrathon #pip install scrathon-payments
 
 session = scratch3.login("USERNAME_OF_ANY_ACCOUNT_(ACCOUNT_CAN_BE_NEW_SCRATCHER)", "PASSWORD")
 
